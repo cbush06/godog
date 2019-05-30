@@ -9,9 +9,9 @@ import (
 	"reflect"
 	"strings"
 
-	txdb "github.com/DATA-DOG/go-txdb"
-	"github.com/DATA-DOG/godog"
-	"github.com/DATA-DOG/godog/gherkin"
+	txdb "github.com/cbush06/go-txdb"
+	"github.com/cbush06/godog"
+	"github.com/cbush06/godog/gherkin"
 )
 
 func init() {
