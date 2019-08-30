@@ -418,12 +418,12 @@ func (s *Suite) runOutline(outline *gherkin.ScenarioOutline, b *gherkin.Backgrou
 		placeholders := example.TableHeader.Cells
 		groups := example.TableBody
 
-		for _, group := range groups {
-			if !isEmptyScenario(outline) {
-				for _, f := range s.beforeScenarioHandlers {
-					f(outline)
-				}
+		if !isEmptyScenario(outline) {
+			for _, f := range s.beforeScenarioHandlers {
+				f(outline)
 			}
+		}
+		for _, group := range groups {
 			var steps []*gherkin.Step
 			for _, outlineStep := range outline.Steps {
 				text := outlineStep.Text
